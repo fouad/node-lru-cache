@@ -448,9 +448,9 @@ function trim (self) {
 function del (self, node) {
   if (node) {
     var hit = node.value
-    if (self[DISPOSE]) {
-      self[DISPOSE](hit.key, hit.value)
-    }
+    // if (self[DISPOSE]) {
+    //   self[DISPOSE](hit.key, hit.value)
+    // }
     self[LENGTH] -= hit.length
     self[CACHE].delete(hit.key)
     self[LRU_LIST].removeNode(node)
